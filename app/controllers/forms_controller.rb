@@ -9,7 +9,7 @@ class FormsController < ApplicationController
     @form = Form.new(allowed_params)
     if @form.save
       flash[:success] = 'Formularz wysłany'
-      render 'new'
+      redirect_to root_url
     else
       render 'new'
     end
