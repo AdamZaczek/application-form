@@ -8,10 +8,9 @@ class FormsController < ApplicationController
   def create
     @form = Form.new(allowed_params)
     if @form.save
-      flash[:info] = "Succes"
-      redirect_to root_url
+      redirect_to root_url, notice: 'Form is valid'
     else
-      render 'new'
+      render 'new', notice: 'Form is invalid'
     end
   end
   

@@ -1,12 +1,6 @@
-<%= form_for @form do |f| %>
-<%= f.label :opis %> <br />
-<%= f.text_field :opis %> <br />
-
-<%= f.label :kategoria %> <br />
-<%= f.text_field :kategoria %> <br />
-
-<%= f.label :email %> <br />
-<%= f.text_field :email %> <br />
-
-<%= f.submit 'Zatwierdź' %>
+<%= simple_form_for @form do |f| %>
+  <%= f.input :opis, label: 'Opis musi mieć minimum 100 liter.', error: 'Brak opisu lub opis zbyt krótki.' %>
+  <%= f.input :kategoria, collection: ['awaria', 'uszkodzenie', 'usterka'], prompt: "Wybierz kategorię" %>
+  <%= f.input :email, placeholder: 'exampleuser@domain.com', error: 'Niewłaściwy email' %>
+  <%= f.button :submit %>
 <% end %>
