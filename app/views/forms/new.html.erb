@@ -1,6 +1,6 @@
 <%= simple_form_for @form do |f| %>
   <%= f.input :opis, label: 'Opis musi mieć minimum 100 liter.', error: 'Brak opisu lub opis zbyt krótki.' %>
-  <%= f.input :kategoria, collection: ['awaria', 'uszkodzenie', 'usterka'], prompt: "Wybierz kategorię" %>
-  <%= f.input :email, placeholder: 'exampleuser@domain.com', error: 'Niewłaściwy email' %>
+  <%= f.input :kategoria, collection: ['awaria', 'uszkodzenie', 'usterka'], prompt: "Wybierz kategorię", error: "Musisz wybrać kategorię." %>
+  <%= f.input :email, placeholder: 'exampleuser@domain.com', error: 'Niewłaściwy email.' %>
   <%= f.button :submit %>
 <% end %>
