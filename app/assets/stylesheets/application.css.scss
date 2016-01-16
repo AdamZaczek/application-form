@@ -33,15 +33,6 @@ background-color: #dff0d8;
 border-color: #d6e9c6;
 }
 
-.formularz {
-display: block;
-vertical-align: middle;
-width: 400px;
-margin-left: auto;
-margin-right: auto;
-  
-}
-
 .lista {
 width: 100px;
 margin-left: auto;
@@ -57,4 +48,12 @@ margin-right: auto;
 
 .btn {
   margin-left: 2%;
+}
+
+.col-md-6 {
+display: block;
+vertical-align: middle;
+width: 400px;
+margin-left: auto;
+margin-right: auto;
 }
